@@ -1,0 +1,39 @@
+run uvicorn app:app --reload in project directory
+
+API Testing Endpoints
+
+1. Get Product List
+   http://http://127.0.0.1:8000/products
+
+   other Endpoints for pagination
+   http://http://127.0.0.1:8000/products?min_price=20000
+   
+   http://http://127.0.0.1:8000/products?max_price=15000
+
+   
+   http://http://127.0.0.1:8000/products?limit=2
+
+   
+   http://http://127.0.0.1:8000/products?offset=2
+   
+
+2. Post Orders
+   http://http://127.0.0.1:8000/orders
+
+   sample json body with address in nested object
+{
+    "items": [
+        {
+            "id": "string",
+            "boughtQuantity": 0,
+            "totalAmount": 0
+        }
+    ],
+    "userAddress": {
+        "city": "string",
+        "country": "string",
+        "zipCode": "string"
+    }
+}
+
+
